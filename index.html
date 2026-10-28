@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="스크린샷 한 장으로 원하는 착장을 찾는 SeenFit 앱 출시 알림">
+  <title>SeenFit — 스크린샷 속 스타일을 내 옷장으로</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="brand-bar">
+    <a href="#top" class="logo" aria-label="SeenFit 홈">SEEN<span>FIT</span></a>
+    <a href="#waitlist" class="mini-cta">출시 알림 받기</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="badge">COMING SOON</p>
+      <h1>마음에 든 착장,<br><em>스크린샷만 올리세요.</em></h1>
+      <p class="hero-copy">SeenFit이 이미지 속 옷을 찾고<br>구매 가능한 링크까지 연결해 드려요.</p>
+      <a href="#steps" class="scroll-cue">어떻게 작동하나요? <span>↓</span></a>
+    </section>
+
+    <section class="steps" id="steps" aria-label="SeenFit 사용 순서">
+      <article class="step">
+        <div class="step-copy">
+          <span class="step-no">STEP 01</span>
+          <h2>스샷을<br>업로드하세요.</h2>
+          <p>SNS, 영상, 거리에서 발견한<br>마음에 드는 착장이면 충분해요.</p>
+        </div>
+        <div class="phone" aria-label="스크린샷 업로드 화면 목업">
+          <div class="phone-top"><i></i></div>
+          <div class="phone-screen">
+            <div class="app-head"><b>SEENFIT</b><span>•••</span></div>
+            <div class="screen-copy"><small>UPLOAD A SCENE</small><strong>어떤 장면을<br>입어보고 싶나요?</strong></div>
+            <div class="image-slot large"><span>이미지 영역</span><small>추후 착장 스크린샷 삽입</small></div>
+            <div class="mock-button">사진 업로드</div>
+          </div>
+        </div>
+      </article>
+
+      <div class="flow-arrow" aria-hidden="true"><span>01</span><i></i><b>02</b></div>
+
+      <article class="step reverse">
+        <div class="step-copy">
+          <span class="step-no">STEP 02</span>
+          <h2>AI가 착장을<br>나눠서 찾아요.</h2>
+          <p>아우터, 상의, 하의, 신발까지<br>스타일의 핵심을 빠르게 분석해요.</p>
+        </div>
+        <div class="phone" aria-label="AI 착장 검색 화면 목업">
+          <div class="phone-top"><i></i></div>
+          <div class="phone-screen dark-screen">
+            <div class="app-head"><b>SEENFIT</b><span>×</span></div>
+            <div class="scan-title"><small>AI SEARCHING</small><strong>착장을 분석하고 있어요</strong></div>
+            <div class="image-slot scan"><span>이미지 영역</span><small>AI 스캔 화면 삽입</small><i class="scan-line"></i></div>
+            <div class="scan-items"><span>OUTER</span><span>TOP</span><span>BOTTOM</span><span>SHOES</span></div>
+          </div>
+        </div>
+      </article>
+
+      <div class="flow-arrow" aria-hidden="true"><span>02</span><i></i><b>03</b></div>
+
+      <article class="step">
+        <div class="step-copy">
+          <span class="step-no">STEP 03</span>
+          <h2>비슷한 옷을<br>바로 확인하세요.</h2>
+          <p>아이템별 추천 상품과 가격을 비교하고<br>구매 페이지로 바로 이동할 수 있어요.</p>
+        </div>
+        <div class="phone" aria-label="착장 상품 링크 화면 목업">
+          <div class="phone-top"><i></i></div>
+          <div class="phone-screen result-screen">
+            <div class="app-head"><b>SEENFIT</b><span>♡</span></div>
+            <div class="result-title"><small>YOUR SEENFIT</small><strong>이 장면과 비슷한 룩</strong></div>
+            <div class="looks">
+              <div class="look-card"><div class="image-slot tiny"><span>상품 이미지</span></div><p><b>오버핏 블레이저</b><small>₩129,000</small></p><button>구매 링크</button></div>
+              <div class="look-card"><div class="image-slot tiny"><span>상품 이미지</span></div><p><b>스트레이트 데님</b><small>₩69,000</small></p><button>구매 링크</button></div>
+              <div class="look-card"><div class="image-slot tiny"><span>상품 이미지</span></div><p><b>레더 로퍼</b><small>₩89,000</small></p><button>구매 링크</button></div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="waitlist" id="waitlist">
+      <div class="waitlist-copy">
+        <p class="badge inverse">EARLY ACCESS</p>
+        <h2>SeenFit을<br>가장 먼저 만나보세요.</h2>
+        <p>출시 소식과 베타 테스트 초대장을 보내드릴게요.</p>
+      </div>
+
+      <form id="leadForm" novalidate>
+        <label for="name">이름</label>
+        <input id="name" name="name" type="text" autocomplete="name" placeholder="이름을 입력해 주세요" required>
+
+        <label for="phone">전화번호</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="010-0000-0000" required>
+
+        <label for="email">이메일</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="seenfit@example.com" required>
+
+        <label class="consent">
+          <input type="checkbox" id="consent" required>
+          <span>개인정보 수집 및 이용에 동의합니다. <button type="button" id="openPrivacy">내용 보기</button></span>
+        </label>
+
+        <button class="submit" type="submit">앱 출시 알림 받기 <span>→</span></button>
+        <p class="form-note">본 페이지는 UI 기본 틀이며, 현재 입력 정보는 저장되지 않습니다.</p>
+        <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer><a href="#top" class="logo">SEEN<span>FIT</span></a><small>본 스타일을, 나에게 맞게.</small></footer>
+
+  <dialog id="privacyDialog">
+    <button class="dialog-close" id="closePrivacy" aria-label="닫기">×</button>
+    <h3>개인정보 수집 및 이용 안내</h3>
+    <p>이름, 전화번호, 이메일은 SeenFit 출시 알림과 베타 테스트 안내를 위해 수집하는 항목으로 구성될 예정입니다.</p>
+    <p>실제 운영 전 보유 기간, 처리 주체, 철회 방법을 확정해 이 영역에 반영해 주세요.</p>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
