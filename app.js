@@ -1,3 +1,10 @@
+window.dataLayer = window.dataLayer || [];
+window.gtag = function gtag() {
+  window.dataLayer.push(arguments);
+};
+window.gtag('js', new Date());
+window.gtag('config', 'G-W7ZT8PP2XL');
+
 const form = document.querySelector('#leadForm');
 const message = document.querySelector('#formMessage');
 const dialog = document.querySelector('#privacyDialog');
