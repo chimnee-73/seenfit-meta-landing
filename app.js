@@ -14,6 +14,30 @@ let formStarted = false;
 const track = (eventName, parameters = {}) => {
   if (typeof window.gtag === 'function') {
     window.gtag('event', eventName, parameters);
+    if (window.fbq && eventName !== 'page_view' && !eventName.includes('scroll')) {
+      const metaEventNames = {
+        generate_lead: 'Lead',
+        sign_up: 'CompleteRegistration',
+        contact_click: 'Contact',
+        view_item: 'ViewContent',
+        add_to_cart: 'AddToCart',
+        begin_checkout: 'InitiateCheckout',
+        purchase: 'Purchase',
+        search: 'Search'
+      };
+      const metaEventName = metaEventNames[eventName];
+
+      if (eventName === 'purchase') {
+        fbq('track', 'Purchase', {
+          value: parameters.value,
+          currency: parameters.currency || 'KRW'
+        });
+      } else if (metaEventName) {
+        fbq('track', metaEventName);
+      } else {
+        fbq('trackCustom', eventName);
+      }
+    }
   }
 };
 
